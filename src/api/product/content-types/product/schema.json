@@ -39,6 +39,9 @@
         "web development",
         "cyber security"
       ]
+    },
+    "instantDelivery": {
+      "type": "boolean"
     }
   }
 }

@@ -381,6 +381,7 @@ export interface ApiProductProduct extends Schema.CollectionType {
     category: Attribute.Enumeration<
       ['tech', 'web development', 'cyber security']
     >;
+    instantDelivery: Attribute.Boolean;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;
