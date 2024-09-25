@@ -7,7 +7,7 @@ module.exports = [
       contentSecurityPolicy: {
         useDefaults: true,
         directives: {
-          'connect-src': ["'self'", 'https:'],
+          'connect-src': ["'self'", 'https://ecommerce-tech-flame.vercel.app'],
           'img-src': ["'self'", 'data:', 'blob:', 'market-assets.strapi.io', 'res.cloudinary.com'],
           'media-src': [
             "'self'",
@@ -21,7 +21,13 @@ module.exports = [
       },
     },
   },
-  'strapi::cors',
+  {
+    name: 'strapi::cors',
+    config: {
+      origin: ['https://ecommerce-tech-flame.vercel.app'], // Add Vercel domain here
+    },
+  },
+ 
   'strapi::poweredBy',
   'strapi::query',
   'strapi::body',
